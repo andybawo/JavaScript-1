@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Flip</title>
+  </head>
+  <body>
+
+    <p>Coin flip Game</p>
+
+    <p>Guess and Win</p>
+
+    
+
+    <button onclick="
+    let guess = '';
+
+    if (result === 'heads') {
+      guess = 'You win';
+    } else {
+      guess = 'You lose';
+    }
+
+    alert(`You picked Heads. Computer picked ${result}, so I guess ${guess}`)
+
+    ">Heads</button>
+
+    <button onclick="
+      if (result === 'tails') {
+        guess = 'You win';
+      } else {
+        guess = 'You lose'
+      }
+
+      alert(`You picked Tails. Computer picked ${result}, so I guess ${guess}`)
+    ">Tails</button>
+
+    <script>
+
+    const randomNumber = Math.random();
+    const randomNumber1 = Math.random();
+
+    let result = '';
+
+    if (randomNumber < 0.5) {
+      result = 'heads';
+    } else {
+      result = 'tails';
+    }
+
+
+    if (randomNumber1 > 0.5) {
+        result = 'tails';
+    } else {
+        result = 'heads';
+    }
+    
+
+    console.log(result)
+
+    </script>
+
+  </body>
+</html>
+
+
