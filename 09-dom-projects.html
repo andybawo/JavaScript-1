@@ -11,11 +11,7 @@
 
     <p>Amazon Shipping Calculator</p>
 
-    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="
-      if (event.key === 'Enter') {
-        calculateTotal();
-      }
-    ">
+    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="calculateOnKeyDown();">
 
     <button onclick=" 
       calculateTotal();
@@ -25,6 +21,12 @@
 
 
   <script>
+    function calculateOnKeyDown() {
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+
     function calculateTotal() {
       const inputElement = document.querySelector('.js-cost-input')
       let cost = Number(inputElement.value);
