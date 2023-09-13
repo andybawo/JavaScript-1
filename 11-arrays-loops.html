@@ -62,7 +62,7 @@
 
 //Problem: We have an array of numbers [1, 1, 3]. How do we calculate the total? We use the Accumulator pattern
 
-    const nums = [1, 1, 3];
+    /*const nums = [1, 1, 3];
     let total = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -78,6 +78,55 @@
       numsDoubled.push(num * 2);
     }
     console.log(numsDoubled);
+    */
+
+    const array1 = [1, 2, 3]
+    const array2 = array1.slice();
+    array2.push(4);
+    console.log(array1);
+    console.log(array2); 
+    //showed us how to use slice to make copies of arrays so it will no longer be a reference
+
+    const [firstValue, secondValue] = [1, 2, 3];
+    //This is destructuring, an easier way to get values and store them in a variable
+
+    for (let i = 1; i <=10; i++){
+      if (i === 3) {
+        continue; // this will make it skip 3
+      }
+      console.log(i);
+      if (i === 8) {
+        break;
+      }
+    }    // the break feature and continue
+
+    let i = 1;
+
+    while (i <= 10) {
+      if (i % 3 === 0){
+        i++;
+        continue;
+      }
+      console.log(i);
+      i++
+    }
+
+
+    function doubleArray(nums) {
+      const nums = [1, 1, 3];
+      const numsDoubled = [];
+
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (num === 0) {
+          return numsDoubled;
+        }
+        numsDoubled.push(num * 2);
+      }
+      return numsDoubled
+    }
+    console.log(doubleArray([1, 1, 3]));
+    console.log(doubleArray([2, 2, 5, 0, 5]));
   </script>
   </body>
 </html>
